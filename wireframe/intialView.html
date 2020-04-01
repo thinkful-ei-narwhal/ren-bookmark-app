@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="ie-edge" />
+    <title>Bookmark App</title>
+    <link href="" rel="stylesheet" type="text/css" />
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>My Bookmark App</h1>
+    <form>
+      <button type="submit" class="add-bookmark">Add</button>
+      <select class="filter-list">
+        <option value="" selected disabled hidden>Filter By Rating</option>
+        <option value="5">☆☆☆☆☆</option>
+        <option value="4">☆☆☆☆</option>
+        <option value="3">☆☆☆</option>
+        <option value="2">☆☆</option>
+        <option value="1">☆</option>
+      </select>
+      <label name="bookmarks">Bookmarks</label>
+      <ul class="bookmark-list">
+        <li>
+          <button class="bookmark-links">Sample 1</button
+          ><span class="star-rating">☆☆☆☆☆</span>
+        </li>
+        <li>
+          <button class="bookmark-links">Sample 2</button
+          ><span class="star-rating">☆☆☆☆</span>
+        </li>
+        <li>
+          <button class="bookmark-links">Sample 3</button
+          ><span class="star-rating">☆☆</span>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>
