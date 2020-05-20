@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  background-color: gray;
+  color: white;
+}
+.header {
+  text-align: center;
+  font-size: 40px;
+  color: gold;
+}
+.bookmark-header {
+  text-align: center;
+}
+.bookmark-selection {
+  border: none;
+  text-align: center;
+  margin: 0px;
+  padding: 30px;
+}
+.new-form {
+  margin: 30px;
+}
+li {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid white;
+  list-style: none;
+}
+
+.bookmark-links-btn {
+  border: none;
+}
+.bookmark-links-btn:hover {
+  color: gold;
+  text-decoration: underline;
+}
+.site-link {
+  text-decoration: none;
+}
+.site-link:hover {
+  color: gold;
+  text-decoration: underline;
+}
+.star-rating {
+  color: gold;
+}
+.add-bookmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input::placeholder {
+  padding: 5px;
+  color: white;
+}
+.bookmark-description {
+  resize: none;
+}
+.bookmark-description::placeholder {
+  padding: 5px;
+  color: white;
+}

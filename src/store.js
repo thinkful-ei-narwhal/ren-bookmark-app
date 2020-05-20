@@ -1,4 +1,3 @@
-'use strict';
 // Add bookmarks to list containing: id, title, url, rating, description
 // See list of bookmarks when first opening display only title and rating
 // Display more details when click on a bookmark, display a visit site button --- toggling
@@ -12,7 +11,7 @@ let error = null;
 let filter = 0;
 
 function findId(id) {
-  return this.bookmark.find(currentItem => currentItem.id === id);
+  return this.bookmark.find((currentItem) => currentItem.id === id);
 }
 
 function addBookmark(newItem) {
@@ -20,18 +19,24 @@ function addBookmark(newItem) {
   this.bookmark.push(newItem);
 }
 
-function deleteBookmark() {
+function deleteBookmark(id) {
   this.bookmark = this.bookmark.filter(
-    currentBookmark => currentBookmark.id !== id
+    (currentBookmark) => currentBookmark.id !== id
   );
 }
-function findAndUpdate(id, newData) {
-  const currentItem = this.findById(id);
-  Object.assign(currentItem, newData);
-}
+
 function toggleViews(bookmarkItem) {
   bookmarkItem.expanded = !bookmarkItem.expanded;
 }
+
+function filterRating(value) {
+  this.filter = value;
+  const filteredBookmarks = bookmark.filter(
+    (bookmarkItem) => bookmarkItem.rating >= this.filter
+  );
+  return filteredBookmarks;
+}
+
 export default {
   bookmark,
   adding,
@@ -40,6 +45,6 @@ export default {
   addBookmark,
   deleteBookmark,
   findId,
-  findAndUpdate,
-  toggleViews
+  toggleViews,
+  filterRating,
 };
